@@ -1,0 +1,16 @@
+<h1>Find museums near this location:</h1>
+
+<h5>Input the GPS Coordinates:</h5>
+<%= form_tag museums_path, method: :get do %>
+  <%= text_field_tag :lat,
+    params[:lat],
+    class: "form-control",
+    placeholder: "latitude"
+  %>
+  <%= text_field_tag :lng,
+    params[:lng],
+    class: "form-control",
+    placeholder: "longitude"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
